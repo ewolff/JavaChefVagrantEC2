@@ -1,0 +1,15 @@
+{
+   "instance_role":"tomcatserver",
+   "tomcat":{
+      "port":"8081"
+   },
+   "webapp":{
+      "webapp":"demo.war"
+   },
+   "run_list":[
+      "recipe[apt]",
+      "recipe[java]",
+      "recipe[tomcat]",
+      "recipe[webapp]"
+   ]
+}
