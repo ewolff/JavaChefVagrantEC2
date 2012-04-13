@@ -1,8 +1,9 @@
 Vagrant::Config.run do |config|
-  config.vm.box = "base"
+  config.vm.box = "lucid32"
+  config.vm.box_url="http://files.vagrantup.com/lucid32.box"
 
-  config.vm.forward_port "http", 8080, 4567
-  config.vm.forward_port "http2", 8081, 4568
+  config.vm.forward_port 8080, 18080
+  config.vm.forward_port 8081, 18081
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["cookbooks"]
@@ -11,7 +12,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe("webapp")
     chef.json.merge!({
 	:tomcat => {
-		:port => 8081
+		:port => 8080
 	},
 	:webapp => {
 		:webapp => "demo.war"

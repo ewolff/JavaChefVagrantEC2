@@ -2,11 +2,8 @@ This is a sample to show how Chef can be used to configure a Java environment.
 
 The Vagrantfile can be used to provision the Java application on a
 virtual machine managed by Virtual Box. See http://vagrantup.com/
-. You will need to install the basic Vagrant box using
-vagrant box add base http://files.vagrantup.com/lucid32.box
-before you can issue
+. To see the application running just use:
 vagrant up
-to see the application running.
 
 Another possibility is to provision the application on Amazon EC2. The
 script to do this is configure-ec2.sh . It takes as parameters:
