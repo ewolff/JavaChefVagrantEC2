@@ -28,7 +28,7 @@ pkgs = value_for_platform(
 )
 
 execute "update-java-alternatives" do
-  command "update-java-alternatives -s java-1.6.0-openjdk"
+  command "update-java-alternatives -s java-6-openjdk"
   returns [0,2]
   action :nothing
   only_if { platform?("ubuntu", "debian") }
