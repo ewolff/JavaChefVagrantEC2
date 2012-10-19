@@ -1,3 +1,6 @@
+Sample Java Project with Chef
+=============================
+
 This is a sample to show how Chef can be used to configure a Java environment.
 
 The Vagrantfile can be used to provision the Java application on a
@@ -7,9 +10,9 @@ vagrant up
 
 Another possibility is to provision the application on Amazon EC2. The
 script to do this is configure-ec2.sh . It takes as parameters:
-- the hostname of the system to deploy to
-- the pem file for authentication
-- the user name
+* the hostname of the system to deploy to
+* the pem file for authentication
+* the user name
 This is only tested with the Ubuntu 11.10 image from
 http://alestic.com/ .
 
