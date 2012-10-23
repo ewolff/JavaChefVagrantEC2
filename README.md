@@ -8,14 +8,7 @@ virtual machine managed by Virtual Box. See http://vagrantup.com/
 . To see the application running just use:
 vagrant up
 
-Another possibility is to provision the application on Amazon EC2. The
-script to do this is configure-ec2.sh . It takes as parameters:
-* the hostname of the system to deploy to
-* the pem file for authentication
-* the user name
-This is only tested with the Ubuntu 11.10 image from
-http://alestic.com/ .
+Another possibility is to provision the application using chef
+solo. The script install.sh does that.
 
-This idea originates from http://opinionated-programmer.com/2011/06/chef-solo-tutorial-managing-a-single-server-with-chef/
-
-The application is located in cookbooks/webapp/files/default .
+The web application is located in cookbooks/webapp/files/default .
