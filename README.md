@@ -12,3 +12,5 @@ Another possibility is to provision the application using chef
 solo. The script install.sh does that.
 
 The web application is located in cookbooks/webapp/files/default .
+
+Look at roles/tomcatserver.json to figure out which recipes are run and how they are customized. The cookbooks are taken from the Opscode's Open Source repository.

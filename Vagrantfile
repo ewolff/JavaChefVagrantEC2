@@ -7,17 +7,8 @@ Vagrant::Config.run do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["cookbooks"]
-    chef.add_recipe("apt")
-    chef.add_recipe("tomcat")
-    chef.add_recipe("webapp")
-    chef.json.merge!({
-	:tomcat => {
-		:port => 8080
-	},
-	:webapp => {
-		:webapp => "demo.war"
-	}
-    })
+    chef.roles_path=["roles"]
+    chef.add_role("tomcatserver")
   end
 
 end
