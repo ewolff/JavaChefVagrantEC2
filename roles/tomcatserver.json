@@ -1,12 +1,13 @@
 {
-  "name": "tomcatserver",
-  "description": "",
   "json_class": "Chef::Role",
+  "name": "tomcatserver",
+  "description": "Install Tomcat and a web application inside Tomcat",
   "default_attributes": {
-  },
-  "override_attributes": {
     "webapp": {
       "webapp": "demo.war"
+    },
+    "tomcat": {
+      "port" : 8080
     }
   },
   "chef_type": "role",
