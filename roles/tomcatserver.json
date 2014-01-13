@@ -1,5 +1,6 @@
 {
   "json_class": "Chef::Role",
+  "chef_type": "role",
   "name": "tomcatserver",
   "description": "Install Tomcat and a web application inside Tomcat",
   "default_attributes": {
@@ -10,11 +11,8 @@
       "port" : 8080
     }
   },
-  "chef_type": "role",
   "run_list": [
     "recipe[apt]",
     "recipe[webapp]"
-  ],
-  "env_run_lists": {
-  }
+  ]
 }
