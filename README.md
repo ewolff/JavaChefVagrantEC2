@@ -24,6 +24,7 @@ To use it:
 * Install Knife - see http://docs.opscode.com/install_workstation.html
 * Install the EC2 plug in - see dazu
   http://docs.opscode.com/plugin_knife_ec2.html
-* Upload the cookbooks using knife cookbook upload –a
-* Upload the role with knife role from file roles/tomcatserver.json
-* Now create a new server with knife ec2 server create -r 'role[tomcatserver]' -i .chef/AmazonPEM.pem -r 'role[tomcatserver]'
+* Upload the cookbooks using  `knife cookbook upload –a`
+* Upload the role with `knife role from file roles/tomcatserver.json`
+* Now create a new server with   `knife ec2 server create -r
+  'role[tomcatserver]' -i .chef/AmazonPEM.pem -r 'role[tomcatserver]'`
